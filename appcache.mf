@@ -1,0 +1,24 @@
+CACHE MANIFEST
+# 2015-08-05:v3-8-3
+
+# Explicitly cached 'master entries'.
+CACHE:
+#./index.html
+./dist/react.dev.addon.js
+./dist/moment.min.js
+./dist/dropbox.js
+./dist/bundle.js
+./dist/bundle.js.map
+
+
+
+# Resources that require the user to be online.
+NETWORK:
+*
+
+# static.html will be served if main.py is inaccessible
+# offline.jpg will be served in place of all images in images/large/
+# offline.html will be served in place of all other .html files
+FALLBACK:
+#/main.py /static.html
+#images/large/ images/offline.jpg
