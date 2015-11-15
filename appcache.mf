@@ -1,14 +1,14 @@
 CACHE MANIFEST
-# 2015-08-05:v3-8-3
+# 2015-08-05:v3-8-4
 
 # Explicitly cached 'master entries'.
 CACHE:
 #./index.html
-./dist/react.dev.addon.js
-./dist/moment.min.js
-./dist/dropbox.js
-./dist/bundle.js
-./dist/bundle.js.map
+./react.dev.addon.js
+./moment.min.js
+./dropbox.js
+./bundle.js
+./bundle.js.map
 
 
 
