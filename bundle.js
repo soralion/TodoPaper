@@ -5668,7 +5668,7 @@
 
 	_me = module.exports;
 
-	extend = __webpack_require__(23);
+	extend = __webpack_require__(22);
 
 	getTouchProps = function(touch) {
 	  if (!touch) {
@@ -6129,7 +6129,7 @@
 	'use strict';
 
 	var keys = __webpack_require__(1);
-	var foreach = __webpack_require__(22);
+	var foreach = __webpack_require__(23);
 
 	var toStr = Object.prototype.toString;
 
@@ -8313,34 +8313,6 @@
 /* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
-	var hasOwn = Object.prototype.hasOwnProperty;
-	var toString = Object.prototype.toString;
-
-	module.exports = function forEach (obj, fn, ctx) {
-	    if (toString.call(fn) !== '[object Function]') {
-	        throw new TypeError('iterator must be a function');
-	    }
-	    var l = obj.length;
-	    if (l === +l) {
-	        for (var i = 0; i < l; i++) {
-	            fn.call(ctx, obj[i], i, obj);
-	        }
-	    } else {
-	        for (var k in obj) {
-	            if (hasOwn.call(obj, k)) {
-	                fn.call(ctx, obj[k], k, obj);
-	            }
-	        }
-	    }
-	};
-
-
-
-/***/ },
-/* 23 */
-/***/ function(module, exports, __webpack_require__) {
-
 	/**
 	 * Copyright 2014-2015, Facebook, Inc.
 	 * All rights reserved.
@@ -8388,6 +8360,34 @@
 	}
 
 	module.exports = assign;
+
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	var hasOwn = Object.prototype.hasOwnProperty;
+	var toString = Object.prototype.toString;
+
+	module.exports = function forEach (obj, fn, ctx) {
+	    if (toString.call(fn) !== '[object Function]') {
+	        throw new TypeError('iterator must be a function');
+	    }
+	    var l = obj.length;
+	    if (l === +l) {
+	        for (var i = 0; i < l; i++) {
+	            fn.call(ctx, obj[i], i, obj);
+	        }
+	    } else {
+	        for (var k in obj) {
+	            if (hasOwn.call(obj, k)) {
+	                fn.call(ctx, obj[k], k, obj);
+	            }
+	        }
+	    }
+	};
+
 
 
 /***/ },
